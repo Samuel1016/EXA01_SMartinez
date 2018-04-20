@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Venta-Accesorios</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script type="text/javascript" src="js/script.js"></script>
+
+</head>
+
+<body>
+  <hr/>
+  <div class="var">
+
+    <div><input class="btn-var" type="button" value="Home" onclick="menu()"></div>
+    <div><input class="btn-var" type="button" value="About"></div>
+    <div><input class="btn-var" type="button" value="Features"></div>
+    <div><input class="btn-var" type="button" value="Sales" onclick="venta()"></div>
+  </div>
+  <div class="corpo" id="home">
+    <div class="msj">
+      <h3>Lorem ipsum dolor sit amet consectetur</h3>
+      <h6>Bienvenido, Nuestra empresa esta muy gustosa en tenerle hoy aqui.</h6>
+    </div>
+    <div class="img"><img src="img/1.jpg" alt=""></div>
+  </div>
+  <div class="venta" id="sales">
+    <div class="dts">
+      <div class="cj-txt">Producto:<select name="productos" class="seld" id="prodd" onchange="ShowSelected()">
+<option>Productos</option>
+
+<option value="1001" id="1">Laptop-HP</option>
+<option value="1002" id="2">Mouse</option>
+<option value="1003" id="3">Cargadores</option>
+<option value="1004" id="4">Teclado</option>
+</select></div>
+      <div class="cj-txt">Almacen: <input type="text" id="alm" readonly="readonly" placeholder="Disponible..."></div>
+      <div class="cj-txt">Precio: <input id="pre" readonly="readonly" placeholder="Precio..." type="text"></div>
+      <div class="cj-txt">Cantidad: <input type="text" id="can" placeholder="Cantidad..."></div>
+      <div class="cj-txt"><input class="btn-in" type="button" onclick="registro()" value="Add"></div>
+    </div>
+    <div class="tb">
+
+      <table>
+        <thead>
+          <tr>
+            <td>#</td>
+            <td>Articulo: </td>
+            <td>Precio:</td>
+            <td>Cantidad:</td>
+            <td>Subtotal:</td>
+            <td>Accion:</td>
+          </tr>
+        </thead>
+        <tbody id="tlb">
+
+        </tbody>
+
+      </table>
+    </div>
+    <div class="fin">
+      <div class="cj-fin">Subtotal: <input type="text" id="subtot" readonly="readonly" placeholder="Subtotal..."></div>
+      <div class="cj-fin">IGV: <input type="text" id="igv" readonly="readonly" placeholder="IGV..."></div>
+      <div class="cj-fin">Total: <input type="text" id="total" readonly="readonly" placeholder="Total..."></div>
+    </div>
+  </div>
+</body>
+<script type="text/javascript">
+menu();
+
+    function menu() {
+      var vn = document.getElementById("sales");
+      vn.style.display = "none";
+      var hm = document.getElementById("home");
+      hm.style.display = "flex";
+    }
+</script>
+
+</html>
